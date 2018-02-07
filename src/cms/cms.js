@@ -31,5 +31,5 @@ CMS.registerEditorComponent({
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: obj => <Youtube id={obj.id}/>,
+  toPreview: Youtube,
 });
