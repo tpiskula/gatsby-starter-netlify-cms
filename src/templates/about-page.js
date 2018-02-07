@@ -27,14 +27,14 @@ export default ({ data }) => {
   return (<AboutPageTemplate
     contentComponent={HTMLContent}
     title={post.frontmatter.title}
-    content={post.html}
+    content={post.htmlAst}
   />);
 };
 
 export const aboutPageQuery = graphql`
   query AboutPage($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+      htmlAst
       frontmatter {
         path
         title
