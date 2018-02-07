@@ -8,6 +8,7 @@ export default class Youtube extends Component {
   }
 
   render() {
+      console.log('VIDEO ',this.props.id)
     return (
       <YouTube
         videoId={this.props.id}
