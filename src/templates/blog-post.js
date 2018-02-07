@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content';
 export const BlogPostTemplate = ({
   content, contentComponent, description, title, helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || HTMLContent;
 
   return (
     <section className="section">

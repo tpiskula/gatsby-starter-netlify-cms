@@ -1,12 +1,22 @@
 import React from 'react';
+import markdown from 'remark-parse';
+import remark2rehype from 'remark-rehype';
+import unified from 'unified';
 import { BlogPostTemplate } from '../../templates/blog-post';
 
 const BlogPostPreview = ({ entry, widgetFor }) => 
 {
-  console.log(entry.getIn(['data', 'body']))
+  const markdownContent = entry.getIn(['data', 'body']);
+
+  var processor = unified()
+  .use(markdown)
+  .use(remark2rehype);
+
+  const content = processor.processSync(markdownContent).contents;
+
   return (
   <BlogPostTemplate
-    content={widgetFor('body')}
+    content={content}
     description={entry.getIn(['data', 'description'])}
     title={entry.getIn(['data', 'title'])}
   />
