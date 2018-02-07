@@ -12,8 +12,8 @@ const BlogPostPreview = ({ entry, widgetFor }) =>
   .use(markdown)
   .use(remark2rehype);
 
-  const content = processor.processSync(markdownContent).contents;
-
+  const content = processor.parse(markdownContent);
+  console.log(content);
   return (
   <BlogPostTemplate
     content={content}
