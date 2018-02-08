@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import YouTube from 'react-youtube';
 
 export default class Youtube extends Component {
   static propTypes = {
@@ -9,9 +8,7 @@ export default class Youtube extends Component {
 
   render() {
     return (
-      <YouTube
-        videoId={this.props.id}
-      />
+      <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.props.id}`} frameborder="0" allowfullscreen></iframe>
     )
   }
 }
