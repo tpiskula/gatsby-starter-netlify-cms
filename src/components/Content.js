@@ -1,5 +1,5 @@
 import React from 'react';
-import raw from 'rehype-raw';
+import rehypeReact from 'rehype-react';
 import Counter from "./Counter";
 import Youtube from './Youtube';
 
