@@ -4486,7 +4486,7 @@ hast-util-parse-selector@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/hast-util-parse-selector/-/hast-util-parse-selector-2.1.0.tgz#b55c0f4bb7bb2040c889c325ef87ab29c38102b4"
 
-hast-util-raw@^2.0.2:
+hast-util-raw@^2.0.0, hast-util-raw@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/hast-util-raw/-/hast-util-raw-2.0.2.tgz#20674cfb45428213917a54ec929e6774df0642d8"
   dependencies:
@@ -8611,6 +8611,12 @@ rehype-parse@^3.1.0:
     hast-util-from-parse5 "^1.0.0"
     parse5 "^2.1.5"
     xtend "^4.0.1"
+
+rehype-raw@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rehype-raw/-/rehype-raw-2.0.0.tgz#5637a9fceef34800fd7c57ca32fd9d5927fd2aaa"
+  dependencies:
+    hast-util-raw "^2.0.0"
 
 rehype-react@^3.0.2:
   version "3.0.2"
