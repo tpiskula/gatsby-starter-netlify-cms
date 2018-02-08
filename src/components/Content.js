@@ -1,5 +1,4 @@
 import React from 'react';
-import rehypeReact from "rehype-react";
 import raw from 'rehype-raw';
 import Counter from "./Counter";
 import Youtube from './Youtube';
@@ -10,7 +9,7 @@ const renderAst = new rehypeReact({
     "interactive-counter": Counter,
     "youtube-player": Youtube,
   },
- }).use(raw).Compiler;
+ }).Compiler;
 
 export default ({ content, className }) => <div className={className}>{content}</div>;
 
