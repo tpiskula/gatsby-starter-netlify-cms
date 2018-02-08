@@ -8,9 +8,10 @@ export default class Youtube extends Component {
   }
 
   render() {
-      console.log('VIDEO ',this.props.id)
     return (
-      <img src={`http://img.youtube.com/vi/${this.props.id}/maxresdefault.jpg`} alt="Youtube Video"/>
+      <YouTube
+        videoId={this.props.id}
+      />
     )
   }
 }
