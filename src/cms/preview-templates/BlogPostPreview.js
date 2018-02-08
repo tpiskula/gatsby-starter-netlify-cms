@@ -8,14 +8,19 @@ import { BlogPostTemplate } from '../../templates/blog-post';
 const BlogPostPreview = ({ entry, widgetFor }) => 
 {
   const markdownContent = entry.getIn(['data', 'body']);
-
+  
+  var remark = unified()
+  .use(markdown);
+  
+  const mdAst = remark.parse(markdownContent);
+  console.log('mdast',mdAst);
+  
   var processor = unified()
-  .use(markdown)
-  .use(remark2rehype, {allowDangerousHTML: true})
-  .use(raw);
+  .use(remark2rehype);
 
-  const content = processor.parse(markdownContent);
-  console.log(content);
+  const content = processor.parse(mdAst);
+  console.log('htmlAst'content);
+  
   return (
   <BlogPostTemplate
     content={content}
