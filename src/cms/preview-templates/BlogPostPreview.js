@@ -16,10 +16,11 @@ const BlogPostPreview = ({ entry, widgetFor }) =>
   console.log('mdast',mdAst);
   
   var processor = unified()
-  .use(remark2rehype);
+  .use(remark2rehype, {allowDangerousHTML: true})
+  .use(raw);
 
   const content = processor.parse(mdAst);
-  console.log('htmlAst'content);
+  console.log('htmlAst',content);
   
   return (
   <BlogPostTemplate
