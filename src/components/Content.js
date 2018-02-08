@@ -13,4 +13,7 @@ const renderAst = new rehypeReact({
 
 export default ({ content, className }) => <div className={className}>{content}</div>;
 
-export const HTMLContent = ({ content, className }) => (<div className={className}>{renderAst(content)}</div>);
+export const HTMLContent = ({ content, className }) => {
+ console.log(content);
+ return (<div className={className}>{renderAst(content)}</div>);
+}
