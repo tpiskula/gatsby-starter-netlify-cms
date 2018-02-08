@@ -35,3 +35,26 @@ CMS.registerEditorComponent({
     return <Youtube id={obj.id}/>;
   },
 });
+CMS.registerEditorComponent({
+  // Internal id of the component
+  id: "counter",
+  // Visible label
+  label: "Counter",
+  // Fields the user need to fill out when adding an instance of the component
+  fields: [],
+  // Pattern to identify a block as being an instance of this component
+  pattern: /^<interactive-counter><\/interactive-counter>/,
+  // Function to extract data elements from the regexp match
+  fromBlock: function(match) {
+    return {};
+  },
+  // Function to create a text block from an instance of this component
+  toBlock: function(obj) {
+    return '<interactive-counter></interactive-counter>';
+  },
+  // Preview output for this component. Can either be a string or a React component
+  // (component gives better render performance)
+  toPreview: function(obj) {
+    return '(Counter)';
+  },
+});
