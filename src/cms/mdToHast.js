@@ -3,7 +3,7 @@ import raw from 'rehype-raw';
 import toHAST from 'mdast-util-to-hast'
 import unified from 'unified';
 
-export default function mdToHast(markdown) {
+export default function mdToHast(markdownContent) {
     var remark = unified()
     .use(markdown);
   
