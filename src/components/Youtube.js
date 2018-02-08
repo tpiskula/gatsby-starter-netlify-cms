@@ -10,8 +10,8 @@ export default class Youtube extends Component {
     return (
       <div style={{
         position: 'relative',
-        padding-bottom: '56.25%',
-        padding-top: 25,
+        paddingBottom: '56.25%',
+        paddingTop: 25,
         height: 0,
       }}>
         <iframe
