@@ -1,7 +1,7 @@
 import React from 'react';
 import markdown from 'remark-parse';
 import remark2rehype from 'remark-rehype';
-import raw from 'rehype-raw;
+import raw from 'rehype-raw';
 import unified from 'unified';
 import { BlogPostTemplate } from '../../templates/blog-post';
 
