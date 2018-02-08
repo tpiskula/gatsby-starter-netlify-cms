@@ -3,7 +3,7 @@ import graphql from 'graphql';
 import Content, { HTMLContent } from '../components/Content';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || HTMLContent;
 
   return (
     <section className="section section--gradient">
